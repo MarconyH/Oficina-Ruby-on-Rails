@@ -1,0 +1,518 @@
+Started GET "/" for ::1 at 2023-05-26 11:24:34 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.9ms | Allocations: 694)
+Completed 200 OK in 166ms (Views: 46.9ms | ActiveRecord: 0.0ms | Allocations: 8222)
+
+
+Started GET "/" for ::1 at 2023-05-26 11:44:15 -0300
+  [1m[35m (88.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (73.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20230526143154_create_people.rb
+20230526144346_create_animals.rb
+
+
+):
+  
+activerecord (7.0.5) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.5) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.5) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.5) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.5) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2023-05-26 11:47:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePeople (20230526143154)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230526143154"]]
+  [1m[36mTRANSACTION (641.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAnimals (20230526144346)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "animals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "person_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_535de784e4"
+FOREIGN KEY ("person_id")
+  REFERENCES "people" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_animals_on_person_id" ON "animals" ("person_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230526144346"]]
+  [1m[36mTRANSACTION (783.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-26 14:47:33.195686"], ["updated_at", "2023-05-26 14:47:33.195686"]]
+  [1m[36mTRANSACTION (430.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-05-26 11:47:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 272)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 871)
+
+
+Started GET "/people" for ::1 at 2023-05-26 11:54:08 -0300
+  
+NoMethodError (undefined method `resourcers' for #<ActionDispatch::Routing::Mapper:0x0000025511942178 @set=#<ActionDispatch::Routing::RouteSet:0x000002550fa26af0>, @draw_paths=[#<Pathname:C:/Users/Marcony/Desktop/Oficina Ruby on Rails/site_muito_top/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x000002551224ea78 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x000002550f519cb0 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/people" for ::1 at 2023-05-26 11:54:34 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 690.9ms | Allocations: 88261)
+Completed 500 Internal Server Error in 702ms (Allocations: 89152)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/Marcony/Desktop/Oficina Ruby on Rails/site_muito_top/tmp/cache/assets/sprockets/v4.0.0/o-/o-LcrrtGw5yRmXDuShGgvshBsi4jMi8UlPPRgZaV9kE.cache.38160.14308.313242, C:/Users/Marcony/Desktop/Oficina Ruby on Rails/site_muito_top/tmp/cache/assets/sprockets/v4.0.0/o-/o-LcrrtGw5yRmXDuShGgvshBsi4jMi8UlPPRgZaV9kE.cache)):
+  
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.0) lib/sprockets/loader.rb:266:in `store_asset'
+sprockets (4.2.0) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/context.rb:117:in `load'
+sprockets (4.2.0) lib/sprockets/context.rb:145:in `depend_on_asset'
+sprockets (4.2.0) lib/sprockets/context.rb:185:in `link_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/context.rb:27:in `compute_asset_path'
+actionview (7.0.5) lib/action_view/helpers/asset_url_helper.rb:203:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:41:in `sourcemap_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:34:in `resolved_sourcemap_comment'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:15:in `block in call'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `gsub'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/people" for ::1 at 2023-05-26 11:55:48 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 130.2ms | Allocations: 41684)
+Completed 200 OK in 134ms (Views: 131.3ms | Allocations: 41974)
+
+
+Started GET "/people" for ::1 at 2023-05-26 11:59:19 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3283)
+Completed 200 OK in 24ms (Views: 19.8ms | Allocations: 4108)
+
+
+Started GET "/people" for ::1 at 2023-05-26 11:59:27 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3238)
+Completed 200 OK in 24ms (Views: 19.1ms | Allocations: 4058)
+
+
+Started GET "/people" for ::1 at 2023-05-26 11:59:32 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3256)
+Completed 200 OK in 23ms (Views: 17.8ms | Allocations: 4076)
+
+
+Started GET "/people" for ::1 at 2023-05-26 11:59:38 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3256)
+Completed 200 OK in 19ms (Views: 15.5ms | Allocations: 4076)
+
+
+Started GET "/people" for ::1 at 2023-05-26 11:59:54 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3252)
+Completed 200 OK in 23ms (Views: 17.6ms | Allocations: 4072)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:01:01 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3257)
+Completed 200 OK in 21ms (Views: 17.8ms | Allocations: 4080)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:01:07 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3264)
+Completed 200 OK in 22ms (Views: 16.7ms | Allocations: 4084)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:01:17 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3259)
+Completed 200 OK in 20ms (Views: 16.4ms | Allocations: 4081)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:01:49 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3244)
+Completed 200 OK in 22ms (Views: 15.9ms | Allocations: 4064)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:01:55 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3248)
+Completed 200 OK in 21ms (Views: 17.0ms | Allocations: 4068)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:02:10 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3241)
+Completed 200 OK in 23ms (Views: 18.8ms | Allocations: 4061)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:02:19 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3263)
+Completed 200 OK in 24ms (Views: 17.9ms | Allocations: 4083)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:02:32 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3244)
+Completed 200 OK in 21ms (Views: 16.9ms | Allocations: 4064)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:02:40 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2866)
+Completed 200 OK in 13ms (Views: 9.8ms | Allocations: 3143)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:02:51 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3232)
+Completed 200 OK in 20ms (Views: 16.0ms | Allocations: 4051)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:03:46 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3245)
+Completed 200 OK in 20ms (Views: 16.3ms | Allocations: 4065)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:05:58 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 17161)
+Completed 200 OK in 54ms (Views: 38.8ms | Allocations: 18810)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:07:51 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1088)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1170)
+Completed 500 Internal Server Error in 13ms (Allocations: 1991)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `graduado' for #<ActionView::Base:0x00000000017a98>):
+    1: <h1>People</h1>
+    2: <%com_fome = true%>
+    3: 
+    4: <strong><%=graduado%></strong>
+    5: <p>Find me in app/views/people/index.html.erb</p>
+  
+app/views/people/index.html.erb:4
+Started GET "/people" for ::1 at 2023-05-26 12:07:54 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1019)
+Completed 500 Internal Server Error in 7ms (Allocations: 1289)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `graduado' for #<ActionView::Base:0x00000000017db8>):
+    1: <h1>People</h1>
+    2: <%com_fome = true%>
+    3: 
+    4: <strong><%=graduado%></strong>
+    5: <p>Find me in app/views/people/index.html.erb</p>
+  
+app/views/people/index.html.erb:4
+Started GET "/people" for ::1 at 2023-05-26 12:08:00 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 145)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3289)
+Completed 200 OK in 20ms (Views: 16.2ms | Allocations: 4120)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:08:24 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  Rendered people/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 3293)
+Completed 200 OK in 21ms (Views: 17.1ms | Allocations: 4125)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:09:49 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:2
+  Rendered people/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 906)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4033)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.4ms | Allocations: 4866)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:10:51 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:2
+  Rendered people/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 694)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3821)
+Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 4655)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:12:20 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:3
+  Rendered people/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 701)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3834)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 4666)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:13:15 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:3
+  Rendered people/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 701)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3831)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 4663)
+
+
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPerson Create (1.2ms)[0m  [1m[32mINSERT INTO "people" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marcony"], ["age", 38], ["created_at", "2023-05-26 15:15:38.872146"], ["updated_at", "2023-05-26 15:15:38.872146"]]
+  [1m[36mTRANSACTION (426.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPerson Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "people"[0m
+Started GET "/people" for ::1 at 2023-05-26 12:15:56 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:3
+  Rendered people/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4352)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4433)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms | Allocations: 4699)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pessoal' for #<ActionView::Base:0x00000000018560>):
+    1: <h1>People</h1>
+    2: 
+    3: <%@pessoas.each do |pessoa|%>
+    4:     <p><%= pessoal.name%></p>
+    5: <%end%>
+    6: <!-- oi, sou um comentário
+    7: 
+  
+app/views/people/index.html.erb:4
+app/views/people/index.html.erb:3
+Started GET "/people" for ::1 at 2023-05-26 12:16:09 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:3
+  Rendered people/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3855)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 4686)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:17:18 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:3
+  Rendered people/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3875)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 0.3ms | Allocations: 4711)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:22:18 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:3
+  Rendered people/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3884)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 0.2ms | Allocations: 4716)
+
+
+Started GET "/people" for ::1 at 2023-05-26 12:22:32 -0300
+Processing by PeopleController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:2
+  Rendered people/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 735)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3863)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 4695)
+
+
