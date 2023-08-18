@@ -1,0 +1,24 @@
+rails new site_muito_top
+
+//entrar no diretório site_muito_top
+
+rails server
+
+//entrar no site pelo navegador, com o endereço localhost:3000
+
+rails generator model Person name:string age:integer
+//cria um modelo Pessoa, que tem um nome e uma idade
+
+rails generate controller People index show create new --skip-router
+//gera um controller para o modelo People
+
+rails generate model Animal name:string person:references
+//gera o modelo animal
+
+//para utilizar o servidor é necessário atualizar as mudanças feitas no código
+//só apertar o botão no site ('-')
+
+rails console
+//abre o console do rails
+
+//dentro do console execute: Person.create name: 'Marcony', age: 38
